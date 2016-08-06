@@ -1,0 +1,9 @@
+1. Know your network
+2. Don't run as admin always
+3. Paatch your systems
+4. Hack yourself first.
+
+
+
+Source:
+1. https://www.youtube.com/watch?v=PC_iMqiuIRQ

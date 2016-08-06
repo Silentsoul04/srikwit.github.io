@@ -1,0 +1,38 @@
+Questions:
+	1. Why has the way designers think become relevant to organizations? What makes them different?
+
+General view of the creative process -> Moses myth
+Innovation is a miracle; most of us just don't have it
+
+Alternative view -> Convert innovation as a series of questions
+
+1. What is?
+Assess current reality 
+(You can later have a data intensive approach)
+This will help:
+	1. Understand the scope of the problem
+	2. Bring forth other needs not previously thought about
+	3. Get an idea of what the stakeholders need to reduce risk
+	4. You will have an overview of what a great solution looks like without having it.
+
+2. What if?
+What if anything was possible.
+Think about possibilities to achieve your goal by coming up with ideas.
+Ask questions, don't stop because of constraints
+Combine your ideas into a concept
+(Possibility driven approach)
+
+3. What wows?
+Making the tradeoff between what is possible and what can be to:
+	Satisfy stakeholders with resources you have in a sustainable way
+Try prototyping your solution
+(Option focussed approach) (Generate a portfolio of solutions and use what work for the stakeholders)
+
+4. What works?
+Try a low fidelity prototype with actual users and obtain their feedback (have fast feedback cycles, lower experiment cost and fail early to succeed sooner and test for key trade-offs and assumptions early on)
+Iterate this process till you get confidence that your idea is of value
+(Iterative approach) (Perform experiment and use it's data)
+(Human driven approach) (Focus on a qualitative and empathetic approach)
+You can now decide to scale it
+
+

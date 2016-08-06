@@ -1,0 +1,31 @@
+Use design thinking for problems that are not one size fits all.
+There is a difference between using analytical skills for a problem and using design thinking.
+
+Problems:
+1. Tame
+	Good agreement on what the problem definition is
+	have enough data to determine cause and effect
+	
+2. Wicked
+	Stakeholder can't agree on the problem so don't even know the solution
+	Can't see cause and effect so try for solutions by trying
+
+    +-------------------+-------------------------+-----------------------+
+    | Problem           | Design thinking         | Linear methods        |
+    |                   |                         |                       |
+    +-------------------+-------------------------+-----------------------+
+    |Human centered     | Deep understanding      | Few people involved   |
+    |                   |                         |                       |
+    +-------------------+-------------------------+-----------------------+
+    | Problem clarity   | Need to explore         | Clarity on problem    |
+    |                   |                         |                       |
+    +-------------------+-------------------------+-----------------------+
+    | Uncertainity      | Many unknowns           |Past data is helpful   |
+    |                   |                         |                       |
+    +-------------------+-------------------------+-----------------------+
+    | Data availability | Very less useful        |Abundant useful data   |
+    |                   |                         |                       |
+    +-------------------+-------------------------+-----------------------+
+
+
+

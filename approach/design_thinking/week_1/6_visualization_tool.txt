@@ -1,0 +1,9 @@
+Visualization:
+Extrapolation from logic (Inductive reasoning)
+
+Innovation development process:
+1. Exploration/Survey
+2. Pattern finding (Visualization role: Concept development)
+3. Ideation (Visualization role: Explaing your idea)
+4. Prototyping
+5. Pilot and scale

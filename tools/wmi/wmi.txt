@@ -1,0 +1,121 @@
+0. WMI Basics
+1. WMI Architecture
+2. WMI Query Language
+3. WMI Eventing
+4. Remote WMI
+5. History of WMI Malware
+6. Attack Lifecycle
+7. Providers
+8. File Format, Investigations, Real-Time Defense, Mitigations
+9. WMI Forensics
+10. Investigation methodology
+11. WMI Attack Detection
+
+0. WMI Basics
+Windows Management Instrumentation (WMI) is a:
+a. Local & Remote system management infrastructure
+b. Present since Windows 98 and NT4
+c. Can be used to:
+	1. Obtain system information
+	2. Execute commands
+	3. Subscribe to events
+
+1. WMI Architecture
+
+2. WMI Query Language
+SQL-like query language used to:
+	a. Filter WMI Object instances
+	b. Register event trigger
+Query classes:
+a. Instance queries
+b. Event queries
+c. Meta queries 
+
+3. WMI Eventing
+A WMI Event has three requirements:
+	a. Filter - An action to trigger off of
+	b. Consumer - An action to take upon triggering the filter
+	c. Binding - Registers a Filter <-> Consumer
+
+Local events run for the lifetime of host process, Permanent WMI events are persistent and run as SYSTEM.
+
+WMI Event types:
+A. Filter:
+1. Intrinsic
+	System classes used in every namespace
+	Must be captured at a polling interval
+	Possible to miss event firings
+2. Extrinsic
+	Non-system classes that fire immediately
+	No chance of missing these
+	Don't include much information
+
+B. Consumer:
+Action taken upon firing an event
+
+Permanent WMI Events:
+Event subscriptions persistent across reboots
+Need Filter, Consumer, Binding
+
+4. Remote WMI
+
+A. DCOM
+DCOM connections established on port 135
+Not firewall friendly
+WMI service winmgmt is running and listening on port 135
+
+B. WinRM/PowerShell Remoting
+SOAP protocol based on WSMan specification
+Encrypted by default
+Official remote management protocol in Windows 2012 r2+
+Single management protocol- 5985(HTTP) or 5986(HTTPS)
+
+5. WMI Malware history
+2010 Stuxnet
+2010 Ghost
+2014 WMI Shell
+2015 APT29
+
+6. WMI Attacks
+1. Reconnaissance
+	HostOS information
+	Files/directory listing
+	Disk/volume listing
+	Registry operations
+	Running processes
+	Service listing
+	Event log
+	Logged on accounts
+	Mounted shares
+	Installed patches
+	Installed AV
+2. VM/Sandbox detection
+	Network Adapter manufacturer
+	BIOS serial number
+	Process containing vm tools
+	Total Physical Memory < n GB
+	Number of logical processors < count
+3. Code execution and lateral movement
+	Invoke-WmiMethod 
+4. Persistence
+5. Data storage
+6. C2 communication
+
+7. WMI Providers
+A WMI query requests data from a provider(a dll) which knows how to ask the OS for data and return it in a properly formatted manner.
+
+8. WMI Forensics
+
+
+References:
+1. https://media.defcon.org/DEF%20CON%2023/DEF%20CON%2023%20presentations/DEFCON-23-Ballenthin-Graeber-Teodorescu-WMI-Attacks-Defense-Forensics.pdf
+
+2. https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/wp-windows-management-instrumentation.pdf
+
+3. la.trendmicro.com/media/misc/understanding-wmi-malware-research-paper-en.pdf
+
+4. https://dl.mandiant.com/EE/library/MIRcon2014/MIRcon_2014_IR_Track_There%27s_Something_About_WMI.pdf 
+
+5. https://media.defcon.org/DEF%20CON%2023/DEF%20CON%2023%20presentations/DEFCON-23-Ballenthin-Graeber-Teodorescu-WMI-Attacks-Defense-Forensics.pdf
+Source:
+1. https://www.youtube.com/watch?v=xBd6p-Lz3kE
