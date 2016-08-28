@@ -1,0 +1,4 @@
+References:
+1. https://msdn.microsoft.com/en-us/library/8a3x2b7f.aspx
+2. https://msdn.microsoft.com/en-us/library/z164t8hs(v=vs.110).aspx
+

@@ -1,0 +1,123 @@
+Implementing security:
+1. Evidence based security
+2. Code access security
+
+Aim:
+1. Erect barriers to prevent malicious code from obtaining what you don't want it to have or perform undesirable actions
+2. Strike a balance between usability and security in all expected scenarios using trusted code
+3. Secure resource access:
+	Protect and limit the access that code has to resources especially when using/invoking code of unknown origin.
+	Techniques to ensure your code is secure:
+	1. Do not use Code Access Security (CAS).
+	2. Do not use partially trusted code without having an alternative security measure.
+		These alternative security measures can be:
+			1. Virtualization
+			2. AppContainers
+			3. OS(Operating System) users and permissions
+			4. Hyper-V Containers
+	3. Do not use .NET remoting
+	4. Do not use Distributed Component Object Model (DCOM).
+	5. Do not use binary formatters.
+4. Security-Neutral Code
+	A security neutral code runs with whatever permission it receives.
+	Example:
+	A security neutral library provides API elements to access files or unmanaged code.
+	If the code accessing these resources doesnt have sufficient permissions it should raise a SecurityException.
+5. Application code that is not a reusable component
+	If your code can be called by a malicious code it can read values of your fields or properties containing sensitive information.
+6. Managed wrapper to native code implementation
+	Read https://msdn.microsoft.com/en-us/library/8a3x2b7f.aspx#Anchor_3
+7. Library code that accesses protected resources
+	Your library is an interface to access certain resources which are otherwise unavailable. Whenever a code requests a resource, ask for its permission to access the resource and then assert its right to perform the operation.
+8. Securing state data
+	Applications that handle sensitive data should keep this under their own control and not allow other potentially malicious code to access the data directly.
+	One way of doing this in memory is to declare these the data as private or internal.
+	However this data can accessed by:
+	1. Using reflection mechanism
+		Highly trusted code that can reference your object can get and set private members.
+	2. Using serialization
+		Highly trusted code can get and set private members if it can access the corresponding data in serialized form of the object.
+	3. Under debugging
+		This data can be read.
+	Make sure none of your own methods or properties expose the values unintentionally.
+9. Security and User input
+	If your code can accept input from external sources (user/Internet) it should validate it.
+	These are a gateway to pass bad data through to other code.
+10. Security and Race conditions
+	Race conditions in Dispose method
+		void Dispose() 
+		{
+		    if( myObj != null ) 
+		    {
+		        Cleanup(myObj);
+		        myObj = null;
+		    }
+		}
+		If a class's Dispose method is not synchronized it is possible that the cleanup code can be called more than once.
+		Once by a thread that calls Cleanup and second time by nother thread before myObj is set to null.
+		An unsynchronized Dispose implementation can involve the use of wrong resource handle for say a file which can lead to security vulnerabilities.
+	Race conditions in constructors
+		It is possible that some threads access class members before before their constructors have run. Review all constructors to make sure there are no security issues and if any synchronize the threads if necessary.
+	Race conditions with cached objects
+		Code that caches security information or uses code access security Assert might also be vulnerable to race conditions if other parts of the class are not properly synchronized.
+		void SomeSecureFunction() 
+		{
+		    if(SomeDemandPasses()) 
+		    {
+		        fCallersOk = true;
+		        DoOtherWork();
+		        fCallersOk = false();
+		    }
+		}
+		void DoOtherWork() 
+		{
+		    if( fCallersOK ) 
+		    {
+		        DoSomethingTrusted();
+		    }
+		    else 
+		    {
+		        DemandSomething();
+		        DoSomethingTrusted();
+		    }
+		}	
+		If there are other paths to DoOtherWork() that can be called from an another thread with the same object an untrusted caller can slippast demand.
+	Race conditions in Finalizers
+		Race conditions can also occur if an object references static or unmanaged resource that it frees in its finalizer.
+		If multiple objects share a resource that is manipulated in a class's finalizer then objects must synchronize access to this resource.
+11. Security and On-The-Fly Code generation
+	For libraries that operate by generating code on behalf of a lesser trust code and running it with a higher trust, It must be ensured that only code you consider safe is generated.
+	You should have strict controls on values you get from the end user.
+	When you compile your code do consider that there is a small windows of time during which a malicious program could modify your code and breakk it.
+12. Secure coding guidelines for unmanaged code
+	If your library uses unmanaged code for example native code APIs such as Win32
+
+13. Memory Type safety and security
+	Memory type safe code accesses only those memory locations that it is allowed to access.
+	For example, type safe codes cannot read values from another object's private fields. It accesses types in a well defined allowable way.
+
+	During Just-in-time (JIT) compilation an optional verification process examines the metadata and Microsoft intermediate language(MSIL) of a method to be compiled into native machine code to verify that they are type safe. The process is skipped if the code has permission to bypass verification.
+	
+	Although verification of type safety is not mandatory to run managed code, it plays a crucial role in assembly isolation and security enforcement.
+	When the code is type safe, the CLR can completely isolate assemblies from each other. This isolation ensures that assemblies cannot adversely affect each other and it increases application reliability.
+	Type safe components can execute safely in the same process even if they are trusted at different levels.
+	When code is not type safe unwanted side effects can occur.
+	For example, the runtime cannot prevent managed code from calling into native(unmanaged code) and performing malicious operations.
+	When code is type safe, the runtime's security enforcement mechanism ensures that it does not access the native code unless it has permission to do so.
+	All code that is not type safe must have been granted SecurityPermission with the passed enum member SkipVerification to run.
+
+14. Principal
+	A principal represents the identity and role of a user and acts on the user's behalf.
+	Role based security in the .NET framework supports three kinds of principals:
+		1. Generic principals
+			Users and principals that exist independent of Windows users and roles
+		2. Windows principals
+			These represent Windows users and their roles (or their Windows groups).
+			A Windows principal can impersonate another user which means that principal can access a resource
+		3. Custom principals
+			It can be defined by an application in any way that is needed for that particular application.
+			They can extend the basic notion of the principal's identity and roles.
+15. Authentication
+	
+16. Authorization
+	Authorization is the process of determining whether a principal is allowed to perform a requested action. Authorization occurs after authentication and uses information about the principal's identity and roles to determines what resources the principalcan access.
