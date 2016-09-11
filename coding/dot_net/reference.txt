@@ -1,0 +1,2 @@
+Reference:
+1. http://stackify.com/15-lessons-learned-while-converting-from-asp-net-to-net-core/

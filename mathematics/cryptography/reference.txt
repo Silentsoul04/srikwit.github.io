@@ -1,0 +1,3 @@
+Reference:
+1. http://cryptologicfoundation.org/learn/educate/bytes/ncmf-social-media-community-shares-whats-in-their-cryptologic-library.html
+2. http://saweis.net/posts/most-cited-security-papers-2013-2014.html

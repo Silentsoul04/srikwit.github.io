@@ -1,0 +1,2 @@
+Reference:
+1. https://github.com/Nummer/Destroy-Windows-10-Spying/tree/master/DWS

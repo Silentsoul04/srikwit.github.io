@@ -1,0 +1,5 @@
+Reference:
+1. https://blog.adafruit.com/2016/09/02/radare2-reverse-engineering-introduced-explained-with-tutorial-challenges-radareorg/
+2. https://www.insinuator.net/2016/08/reverse-engineering-with-radare2-intro/
+3. https://www.insinuator.net/2016/08/reverse-engineering-with-radare2-part-1/
+4. https://www.insinuator.net/2016/08/reverse-engineering-with-radare2-part-2/

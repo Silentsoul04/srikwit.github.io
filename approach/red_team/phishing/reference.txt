@@ -1,0 +1,2 @@
+Reference:
+1. https://sites.google.com/a/chromium.org/dev/Home/chromium-security/client-identification-mechanisms

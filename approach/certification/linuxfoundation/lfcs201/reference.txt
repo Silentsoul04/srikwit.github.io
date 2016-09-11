@@ -1,0 +1,8 @@
+Reference:
+1. https://www.linux.com/learn/tecmints-10-lessons-prep-linux-foundation-sysadmin-certification
+2. http://thoughts.stuart-edwards.info/index.php/sysadmin/lfcs-exam-preparation
+3. https://gist.github.com/cerebrux/c0e67d2ce0ad053f44ce
+4. http://www.tecmint.com/sed-command-to-create-edit-and-manipulate-files-in-linux/
+5. https://eatpeppershothot.blogspot.in/2015/03/review-of-lfcs-ubuntu-exam-taken-on-feb.html
+6. https://gist.github.com/gojun077/5f30cc58c5f8d5a66d3b
+7. http://mathematicbren.blogspot.in/2014/12/practice-test.html

@@ -117,7 +117,79 @@ Aim:
 		3. Custom principals
 			It can be defined by an application in any way that is needed for that particular application.
 			They can extend the basic notion of the principal's identity and roles.
+
+
+	Role based security:
+		Role based security is used when an application requires multiple approvals to complete an action.
+		For example, to approve a transaction clerks might have a different approval threshold as compared to a vice president.
+
+		.NET framework's role based security supports authorization by making information about the principal which is constructed from an associated identity available to the current thread.
+		The identity can be either based on a Windows account or a custom one unrelated to a Windows account.
+		
+		.NET framework applications can make authorization decisions based on the principal's idenity or role membership or both.
+		A role is a named set of principals that have the same privilege with respect to security.
+		A principal can be a member of one or more roles.
+		Thus, applications can use role membership to determine whether a principal is authorized to perform a requested action.
+
+		.NET role based security provides System.Security.Permissions.PrincipalPermission objects that enable the CLR to perform authorization in a way similar to code access security checks.
+		The PrincipalPermission class represents the identity or role that the principal must match and is compatible with both declarative and imperative security checks.
+
+		Principal and Identity Objects:
+		
+			Managed code can discover the identity/role of a principal through a Principal object.
+			The Principal object contains a reference to the Identity object.
+			
+			In most network environments, user accounts represent people or programs while group accounts represent certain categories of users and rights they possess.
+
+			Similarly, .NET object Identity object represents users while roles represent memberships and security contexts.
+
+			In the .NET framework, the principal object encapsulates both an identity object and role.
+			.NET framework applications grant rights to the principal based on its identity or more commonly its role membership.
+
+			Identity Objects:
+				Identity object encapsulates information about the user or entity being validated.
+				At the most basic level, identity objects contain a name and an authentication type.
+				The name can either be a user's name or the name of a Windows account and the authentication can either be a supported logon protocol such as Kerberos V5 or a custom value.
+				
+				The .NET frmaework defines a GenericIdentity object that can be used for most custom logon based scenarios and a more specialized WindowsIdentity object that can be used if you want your application to relly on Windows authentication.
+				
+				The IIdentity interface defines properties for accessing a name and an authentication type.
+				All Identity classes implement the IIdentity interface.
+				There is no required relationship between an Identity object and the Windows NT process token under which a thread is currently executing. However, if the Identity object is a WindowsIdentity object the identity is assumed to represent a Windows NT security token.
+
+			Principal objects:
+				Principal object represents the security context under which the code is running.
+				Applications that implement role based security rant rights based on the role associated with a principal object.
+				Similar to identity objects, the. NET framework provides a GenericPrincipal object and a WindowsPrincipal object.
+
+				The IPrincipal interface defines a property for accessing an associated Identity object as well as for determining whether the user identified by the Principal object is a member of a given role.
+				All Principal classes implement the IPrincipal interface as well as any additional properties and methods that are necessary.
+				For example, the WindowsPrincipal class implements additional functionality for mapping Windows NT or Windows 2000 group membership to roles.
+				
+				A Principal object is bound to a call context(CallContext) object within an application domain(AppDomain).
+				A default call context is always created with each new AppDomain, so there is always a call context available to accept the Principal object.
+				When a new thread is created, a CallContext is also created for the thread.
+				The Principal object reference is automatically copied from the creating thread to the new thread's CallContext.
+				If the runtime cannot decide which Principal object belongs to the creator of the thread, it follows the default policy for Principal and Identity object creation.
+
+				A configurable application domain specific policy defines the rules for deciding what type of Principal object to associate with a new application domain.
+				When security policy permits, the runtime can create Principal and Identity objects that reflect the operating system token associated with the current thead of execution.
+				By default, the runtime uses Principal and Identity objects that represent unauthenticated users.
+				The runtime does not create these default Principal and Identity objects until the code attempts to access them.
+			
+				Trusted code that creates an application domain can set the application domain policy that controls construction of default Principal and Identity objects.
+				This application domain specific policy applies to all execution threads in that application domain.
+				An unmanaged trusted host inherently has the ability to set this policy but managed cde that sets this policy must have the System.Security.Permissions.SecurityPermission for controlling domain policy.
+
+				When transmitting a Principal object across application domains but within the same process(on the same computer) the remoting infrastructure copies a referebce to the Principal object associated with the caller's context to the callee's context.
 15. Authentication
-	
+	Authentication is the process of discovering and verifying the identity of a principal by examining the user's credentials and validating those credentials against some authority. The information used by authentication is directly usable by your code. 
+	There are a lot of authentication mechanisms used today many of which can be used with .NET Framework role based security. Soe of the commonly used mechanisms are:
+	1. basic
+	2. digest
+	3. Passport
+	4. operating system (such as NTLM or Kerberos)
+	5. application defined mechanisms
+
 16. Authorization
 	Authorization is the process of determining whether a principal is allowed to perform a requested action. Authorization occurs after authentication and uses information about the principal's identity and roles to determines what resources the principalcan access.

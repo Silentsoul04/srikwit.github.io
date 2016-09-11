@@ -1,0 +1,6 @@
+Reference:
+1. https://www.sans.org/reading-room/whitepapers/detection/mimikatz-overview-defenses-detection-36780
+2. https://jimshaver.net/2016/02/14/defending-against-mimikatz/
+3. https://dfir-blog.com/2015/11/24/protecting-windows-networks-dealing-with-credential-theft/
+4. https://labs.mwrinfosecurity.com/blog/digging-into-ms14-068-exploitation-and-defence/
+5. http://brakeingsecurity.com/2016-030-defending-against-mimikatz-and-other-memory-based-password-attacks
