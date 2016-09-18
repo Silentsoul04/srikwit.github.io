@@ -6,3 +6,4 @@ Reference:
 5. https://eatpeppershothot.blogspot.in/2015/03/review-of-lfcs-ubuntu-exam-taken-on-feb.html
 6. https://gist.github.com/gojun077/5f30cc58c5f8d5a66d3b
 7. http://mathematicbren.blogspot.in/2014/12/practice-test.html
+8. https://training.linuxfoundation.org/certification/lfcs

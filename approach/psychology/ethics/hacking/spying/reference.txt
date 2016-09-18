@@ -1,0 +1,3 @@
+Reference:
+1. https://netzpolitik.org/2016/secret-report-german-federal-intelligence-service-bnd-violates-laws-by-the-dozen/
+2. https://www.cs.columbia.edu/~smb/papers/internet-3rd-party.pdf

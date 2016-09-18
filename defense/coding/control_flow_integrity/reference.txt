@@ -1,0 +1,2 @@
+Reference:
+1. http://nebelwelt.net/blog/20160913-ControlFlowIntegrity.html
