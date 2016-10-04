@@ -1,0 +1,3 @@
+Reference:
+1. https://scdn.line-apps.com/stf/linecorp/en/csr/line-encryption-whitepaper-ver1.0.pdf?chachetaisaku
+2. http://merkle.com/1974/

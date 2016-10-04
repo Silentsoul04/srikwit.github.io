@@ -1,0 +1,2 @@
+Reference:
+1. https://www.blackhat.com/docs/us-16/materials/us-16-Krug-Hardening-AWS-Environments-And-Automating-Incident-Response-For-AWS-Compromises.pdf

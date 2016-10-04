@@ -1,0 +1,3 @@
+Reference:
+1. https://wiremask.eu/writeups/hackingweek-2015-reverse-4/
+2. https://recon.cx/2016/recordings/

@@ -1,0 +1,7 @@
+Reference:
+1. http://blog.ioactive.com/2016/09/five-attributes-of-effective-corporate.html
+2. http://www.harmj0y.net/blog/redteaming/offensive-encrypted-data-storage/
+3. https://www.youtube.com/watch?v=cOfN2CECL6M
+4. https://www.youtube.com/watch?v=4w7krkqxRck&list=PL9HO6M_MU2nf8Fa5bVefBW-9bg5Rx94_c
+5. http://blog.cobaltstrike.com/2015/09/30/advanced-threat-tactics-course-and-notes/
+6. https://github.com/rsmudge/Malleable-C2-Profiles

@@ -1,0 +1,3 @@
+Reference:
+1. http://www.csl.sri.com/users/neumann/cacm239.pdf
+2. https://github.com/gregdurrett/berkeley-doc-summarizer

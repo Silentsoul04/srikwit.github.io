@@ -1,2 +1,4 @@
 Reference:
 1. http://blog.apnic.net/2016/09/15/quiet-ipv4-internet/
+2. https://tools.ietf.org/html/draft-west-let-localhost-be-localhost-02
+3. https://www.ietf.org/rfc/rfc3514.txt

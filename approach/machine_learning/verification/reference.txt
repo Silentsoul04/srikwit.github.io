@@ -1,0 +1,4 @@
+Reference:
+1. https://blog.acolyer.org/2016/09/22/why-should-i-trust-you-explaining-the-predictions-of-any-classifier/
+2. https://github.com/openai/cleverhans
+3. http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43146.pdf

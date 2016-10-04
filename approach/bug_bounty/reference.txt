@@ -1,4 +1,0 @@
-Reference:
-1. https://www.dtc.umn.edu/weis2004/rescorla.pdf
-2. https://github.com/ngalongc/bug-bounty-reference
-

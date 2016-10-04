@@ -1,0 +1,7 @@
+References:
+1. https://www.corelan.be/index.php/2015/10/13/how-to-become-a-pentester/
+2. http://pastebin.com/raw/cRYvK4jb
+3. http://pastebin.com/raw/0SNSvyjJ
+4. https://www.reddit.com/r/HowToHack/comments/52udkv/a_day_in_the_life_of_a_pentester_how_i_owned_your/
+5. https://www.youtube.com/watch?v=b8_sOoQtALs
+6. https://www.youtube.com/watch?v=LmhTW3fsnmg

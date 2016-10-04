@@ -1,2 +1,3 @@
 Reference:
 1. https://github.com/ikkisoft/SerialKiller
+2. http://blog.nibblesec.org/2016/10/defending-against-java-deserialization.html

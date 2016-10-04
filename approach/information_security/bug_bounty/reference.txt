@@ -1,0 +1,7 @@
+Reference:
+1. https://www.dtc.umn.edu/weis2004/rescorla.pdf
+2. https://github.com/ngalongc/bug-bounty-reference
+3. https://www.usenix.org/system/files/conference/cset16/cset16-paper-nord.pdf
+4. https://www.zerodium.com/program.html
+5. http://www.darkreading.com/vulnerabilities---threats/a-bug-bounty-reality-check/d/d-id/1327051
+6. http://haxx.ml/post/144158104336/infosec-hobbyists-r-us

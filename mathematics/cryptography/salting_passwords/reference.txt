@@ -1,0 +1,3 @@
+Reference:
+1. https://www.ietf.org/mail-archive/web/secdir/current/msg06812.html
+2. https://tools.ietf.org/html/draft-harkins-salted-eap-pwd-06

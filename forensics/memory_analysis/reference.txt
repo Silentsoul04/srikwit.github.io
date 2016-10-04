@@ -1,2 +1,4 @@
 Reference:
 1. https://hackerlists.com/memory-analysis-tools/
+2. https://blog.comae.io/your-favorite-memory-toolkit-is-back-f97072d33d5c#.gos3b0dwg
+3. https://sysforensics.org/2016/10/vmware-volume-header-date-and-time/

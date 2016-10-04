@@ -1,0 +1,5 @@
+Reference:
+1. http://motherboard.vice.com/read/tor-captchas
+2. https://diracdeltas.github.io/blog/rate-limiting-anonymous-accounts/
+3. https://github.com/cloudflare/challenge-bypass-specification/blob/master/captcha-bypass-formal-spec.txt
+4. 

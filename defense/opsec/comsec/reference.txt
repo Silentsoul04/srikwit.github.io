@@ -1,2 +1,6 @@
 Reference:
 1. https://grugq.tumblr.com/post/150533138973/intelligence-agencies-access-private-telegram
+2. http://www.oversec.io/
+3. http://motherboard.vice.com/read/this-cybersecurity-firm-maps-hackers-lives-by-the-clues-they-leave-online
+4. https://arxiv.org/abs/1609.09359
+

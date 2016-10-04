@@ -1,0 +1,2 @@
+Reference:
+1. https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/

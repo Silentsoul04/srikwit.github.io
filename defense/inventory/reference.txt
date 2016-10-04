@@ -1,0 +1,2 @@
+Reference:
+1. https://osquery.readthedocs.io/en/stable/
